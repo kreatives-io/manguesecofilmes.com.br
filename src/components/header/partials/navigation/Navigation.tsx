@@ -16,7 +16,7 @@ export default function Navigation({ links }: NavProps) {
     <nav className="flex flex-row justify-between items-center w-full gap-4 mr-10 h-[24px]">
       {links.map((link) => (
         <Link key={link.label} href={link.href}>
-          <span>{link.label}</span>
+          <span className="hover:text-persian">{link.label}</span>
         </Link>
       ))}
     </nav>

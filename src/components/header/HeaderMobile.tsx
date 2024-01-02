@@ -34,7 +34,7 @@ export default function HeaderMobile({ links }: NavProps) {
     return (
       <div className={`flex ${menuAnimationClass} w-full lg:hidden justify-center align-center self-center relative container`}>
         <div className="flex w-full px-4">
-          <div className="mt-2 uppercase tracking-widest ">
+          <div className="mt-2 uppercase tracking-extra-wide">
             <p className="text-persian text-lg">EDVALDO</p>
             <p className="text-persian text-lg">RAW</p>
           </div>
