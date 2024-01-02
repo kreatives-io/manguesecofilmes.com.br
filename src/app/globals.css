@@ -25,3 +25,9 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer utilities {
+  .tracking-extra-wide {
+    letter-spacing: 0.3em; 
+  }
+}
