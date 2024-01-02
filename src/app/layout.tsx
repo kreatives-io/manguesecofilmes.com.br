@@ -13,11 +13,9 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
   lang,
-}: {
-  children: React.ReactNode;
-  lang: 'en'|'pt';
-}) {
+}: any) {
   const fontClass = lang === 'en'? 'font-freight-en': 'font-freight-pt';
+
   return (
     <html lang={lang}>
       <body className="font-freight">
