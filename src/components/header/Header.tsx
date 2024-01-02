@@ -12,7 +12,7 @@ export default function Header() {
     ];
   return (
     <header className='flex justify-center w-full py-10'>
-        {/* <HeaderDesktop links={links} /> */}
+        <HeaderDesktop links={links} />
         <HeaderMobile links={links}/>
     </header>
   )
