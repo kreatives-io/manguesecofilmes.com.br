@@ -1,6 +1,7 @@
+'use client'
 import React from 'react'
 import Navigation,{LinkShape} from "./partials/navigation/Navigation";
-
+import LanguageSwitcher from "./partials/language-switcher/LanguageSwitcher";
 interface NavProps {
     links: LinkShape[];
   }
@@ -16,6 +17,7 @@ export default function HeaderDesktop({links}:NavProps) {
         </div>
         <div className="hidden lg:flex absolute uppercase right-0 top-[22%] bottom-0 h-[24px] items-center justify-center ">
           <Navigation links={links} />
+          <LanguageSwitcher />
       </div>
       </div>
     );
