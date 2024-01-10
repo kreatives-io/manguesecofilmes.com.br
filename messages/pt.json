@@ -1,8 +1,15 @@
 {
-    "menu": {
-      "works": "Trabalhos",
-      "shop": "Loja",
-      "about": "Sobre"
-    }
+  "menu": {
+    "works": "Trabalhos",
+    "shop": "Loja",
+    "about": "Sobre"
+  },
+  "about": {
+    "h3": "Sobre",
+    "h1": "Edvaldo Raw é um diretor de cinema e diretor de fotografia brasileiro nascido e criado em Salvador, Bahia.",
+    "h2": "Edvaldo Raw",
+    "h5": "Diretor de cinema e fotografia",
+    "description": "Edvaldo Raw, nascido e criado em Salvador, Bahia, é diretor de fotografia, diretor de cinema e escritor. Tem seu trabalho dividido nas diversas formas de contar histórias, desenvolvendo videoclipes, publicidade e curtas-metragens. Com seu trabalho já ganhou festivais nacionais e internacionais como “Music Video Festival Brasil” e “Panorama Coisas de Cinema”.",
+    "p": "Representado por"
   }
-  
+}

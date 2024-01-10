@@ -3,6 +3,14 @@
       "works": "Works",
       "shop": "Shop",
       "about": "About"
+    },
+    "about":{
+      "h3": "About",
+      "h1": "Edvaldo Raw is a Brazilian Cinematographer and director born and raised in Salvador, Bahia. ",
+      "h2": "Edvaldo Raw",
+      "h5": "Cinematographer and Director",
+      "description": "Edvaldo Raw, born and raised in Salvador, Bahia, is a cinematographer, director and writer. Has his work divided in the various forms of storytelling, developing music videos, advertising and shortfilms. With his work, has won national and international festivals such as 'Music Video Festival Brasil' and 'Panorama Coisas de Cinema'.",
+      "p": "Represented by "
     }
   }
   

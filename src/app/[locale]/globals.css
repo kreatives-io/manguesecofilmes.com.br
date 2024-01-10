@@ -30,4 +30,16 @@ body {
   .tracking-extra-wide {
     letter-spacing: 0.3em; 
   }
+  .tracking-xg-wide {
+    letter-spacing: 0.5em;
+  }
+  .tracking-ultra-wide {
+    letter-spacing: 0.8em; 
+  }
+}
+
+@layer components {
+  .container {
+      @apply w-full max-w-[calc(100%-80px)] md:max-w-[calc(100%-80px)] lg:max-w-[calc(1024px-80px)] xl:max-w-[calc(100%-80px)] 2xl:max-w-[1440px];
+  }
 }

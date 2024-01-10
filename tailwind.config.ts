@@ -9,11 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily:{
-        'freight':['"Freight Big Pro"', 'sans-serif']
+        freight: ["var(--font-freight)"],
       },
       colors: {
         'persian': '#da1f1f'
-        
       },
     },
   },
