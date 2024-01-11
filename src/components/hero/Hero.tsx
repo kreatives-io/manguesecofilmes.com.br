@@ -1,86 +1,25 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
+
+const GRID_IMG_SIZE = 9;
 
 export default function Hero() {
+  const gridArray = Array.from(Array(GRID_IMG_SIZE).keys());
+
   return (
-    <section className='w-full max-w-[100%] mx-auto max-h-screen justify-center items-center px-4 4k:max-w-[80%] font-freight'>
-        <div className='flex flex-wrap justify-center items-center lg:grid-cols-2 2xl:fgrid-cols-3'>
-            <div className="relative w-[95%] lg:w-[50%] py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-1.png"
-                    alt="Photo 1"
-                    width={1000}
-                    height={0}
-                    
-                />
-            </div>
-            <div className="relative w-[95%] lg:w-[50%] py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-2.png"
-                    alt="Photo 2"
-                    width={1000}
-                    height={0}
-                />
-            </div>
-            <div className="relative w-[95%] lg:w-[50%] py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-3.png"
-                    alt="Photo 3"
-                    width={1000}
-                    height={0}
-                />
-            </div>
-            <div className="relative w-[95%] lg:w-[50%] py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-4.png"
-                    alt="Photo 3"
-                    width={1000}
-                    height={0}
-                />
-            </div>
-            <div className="relative w-[95%] lg:w-[50%] py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-5.png"
-                    alt="Photo 3"
-                    width={1000}
-                    height={0}
-                />
-            </div>
-            <div className="relative w-[95%] lg:w-[50%] py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-8.png"
-                    alt="Photo 3"
-                    width={1000}
-                    height={0}
-                />
-            </div>
-            <div className="relative w-[95%] lg:w-[50%] py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-6.png"
-                    alt="Photo 3"
-                    width={1000}
-                    height={0}
-                />
-            </div>
-            <div className="relative w-[95%] lg:w-[50%] py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-9.png"
-                    alt="Photo 3"
-                    width={1000}
-                    height={0}
-                />
-            </div>
-            <div className="relative w-[95%] lg:w-[50%]  py-2 2xl:w-[33%]">
-                <Image 
-                    src="/images/image-7.png"
-                    alt="Photo 3"
-                    width={1000}
-                    height={0}
-                />
-            </div>
-            
-            
-        </div>
+    <section className="w-full max-w-[100%] mx-auto max-h-screen justify-center items-center xl:max-w-[80%] 2xl:max-w-[70%] 2xl:max-w-[50%]">
+      <div className="grid grid-cols-1 lg:grid-cols-3">
+        {gridArray.map((_, index) => (
+          <Image
+            key={index}
+            src={`/images/image-${index + 1}.png`}
+            alt="hero image"
+            width={1000}
+            height={0}
+            className="object-cover h-full w-full"
+          />
+        ))}
+      </div>
     </section>
-  )
+  );
 }
