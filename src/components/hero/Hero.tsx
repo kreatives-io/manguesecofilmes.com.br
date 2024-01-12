@@ -7,8 +7,8 @@ export default function Hero() {
   const gridArray = Array.from(Array(GRID_IMG_SIZE).keys());
 
   return (
-    <section className="w-full max-w-[100%] mx-auto max-h-screen justify-center items-center xl:max-w-[80%] 2xl:max-w-[70%] 2xl:max-w-[50%]">
-      <div className="grid grid-cols-1 lg:grid-cols-3">
+    <section className="w-full max-w-[100%] mx-auto max-h-screen justify-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {gridArray.map((_, index) => (
           <Image
             key={index}
