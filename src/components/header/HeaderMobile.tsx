@@ -1,7 +1,11 @@
 'use client'
 import React, { useMemo, useState } from "react";
+import Link from "next/link";
+// Icons
 import { HiOutlineXMark } from "react-icons/hi2";
 import { CiMenuBurger } from "react-icons/ci";
+// UI Elements
+//@TODO: Adjust this import to avoid repeating hamburguer menu name
 import HamburguerMenu from "./partials/hamburguer-menu/HamburguerMenu";
 
 export type LinkShape = {
@@ -41,10 +45,10 @@ export default function HeaderMobile({ links }: NavProps) {
       className={`flex ${menuAnimationClass} w-full justify-center align-center self-center relative container lg:hidden`}
     >
       <div className="flex w-full">
-        <div className="mt-2 uppercase tracking-extra-wide">
+        <Link className="mt-2 uppercase tracking-extra-wide" href="/">
           <p className="text-persian text-lg">EDVALDO</p>
           <p className="text-persian text-lg">RAW</p>
-        </div>
+        </Link>
         <div className={opacityAnimation}>
           {isToggleOpen && <HamburguerMenu links={links} />}
         </div>

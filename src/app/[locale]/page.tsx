@@ -1,9 +1,12 @@
 import { Hero } from '@/components'
+import { client } from '@/lib/sanity/lib/client';
 
-export default function Home() {
+export default async function Home() {
+  const works = await client.fetch(`*[_type == "work"] { category, artist, slug, publishedAt, mainImage, workName }`);
+    
   return (
     <>
-      <Hero />
+      <Hero works={works} />
     </>
   );
 }
