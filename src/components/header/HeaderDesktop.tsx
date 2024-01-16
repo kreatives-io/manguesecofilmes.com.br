@@ -30,7 +30,7 @@ export default function HeaderDesktop({ links }: NavProps) {
           links={links}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
-          ref={ref}
+          clickRef={ref}
         />
         <LanguageSwitcher />
       </div>

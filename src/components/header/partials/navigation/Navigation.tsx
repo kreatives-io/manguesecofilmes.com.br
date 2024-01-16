@@ -1,7 +1,4 @@
-"use client";
-import { useClickAway } from "@/hooks";
 import Link from "next/link";
-import React, { useState } from "react";
 
 export type LinkShape = {
   label: string;
@@ -13,10 +10,10 @@ interface NavProps {
   links: LinkShape[];
   isOpen: boolean;
   setIsOpen: (state: boolean) => void;
-  ref: any;
+  clickRef: any;
 }
 
-export default function Navigation({ links, isOpen, setIsOpen, ref }: NavProps) {
+export default function Navigation({ links, isOpen, setIsOpen, clickRef }: NavProps) {
   return (
     <nav className="flex flex-row justify-between items-center w-full gap-4 mr-10 h-[24px]">
       {links.map((link) => {
@@ -35,7 +32,7 @@ export default function Navigation({ links, isOpen, setIsOpen, ref }: NavProps) 
               {isOpen && (
                 <>
                   {link.subItems?.map((subItem, index) => (
-                    <Link href={subItem.href} key={index} ref={ref}>
+                    <Link href={subItem.href} key={index} ref={clickRef}>
                       <span className="hover:text-persian">
                         {subItem.label}
                       </span>

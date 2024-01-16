@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import localFont from "next/font/local";
-import { Header } from "@/components";
+import { Header, Footer } from "@/components";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import React from "react";
-import Footer from "@/components/footer";
+
+import type { Metadata } from "next";
+
+import "./globals.css";
 
 const freight = localFont({
   src: [
