@@ -17,7 +17,7 @@ export default function Header({ locale }: { locale: string }) {
         { label: t("works unpublished"), href: `/${locale}/works-unpublished` },
       ],
     },
-    { label: t("shop"), href: `/${locale}/shop` },
+    // { label: t("shop"), href: `/${locale}/shop` },
     { label: t("about"), href: `/${locale}/about` },
   ];
 
