@@ -1,6 +1,8 @@
 {
     "menu": {
       "works": "Works",
+      "works featured": "Featured",
+      "works unpublished": "Unpublished",
       "shop": "Shop",
       "about": "About"
     },

@@ -1,6 +1,8 @@
 {
   "menu": {
     "works": "Trabalhos",
+    "works featured": "Trabalhos publicados",
+    "works unpublished": "Trabalho não publicados",
     "shop": "Loja",
     "about": "Sobre"
   },

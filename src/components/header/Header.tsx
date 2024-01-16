@@ -10,13 +10,20 @@ export default function Header({ locale }: { locale: string }) {
   console.log({ locale });
 
   const links: LinkShape[] = [
-    { label: t("works"), href: `/${locale}/works` },
+    {
+      label: t("works"),
+      href: '',
+      subItems: [
+        { label: t("works featured"), href: `/${locale}/works-featured` },
+        { label: t("works unpublished"), href: `/${locale}/works-unpublished` },
+      ],
+    },
     { label: t("shop"), href: `/${locale}/shop` },
     { label: t("about"), href: `/${locale}/about` },
   ];
 
   return (
-    <header className="flex justify-center w-full py-10 font-freight">
+    <header className="flex justify-center w-full py-12 font-freight">
       <HeaderDesktop links={links} />
       <HeaderMobile links={links} />
     </header>
