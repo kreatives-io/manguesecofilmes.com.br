@@ -7,7 +7,6 @@ import { useTranslations } from "next-intl";
 
 export default function Header({ locale }: { locale: string }) {
   const t = useTranslations("menu");
-  console.log({ locale });
 
   const links: LinkShape[] = [
     {
