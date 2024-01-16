@@ -6,6 +6,7 @@ import { Header } from "@/components";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import React from "react";
+import Footer from "@/components/footer";
 
 const freight = localFont({
   src: [
@@ -44,6 +45,7 @@ export default function LocaleLayout({
           <NextIntlClientProvider messages={messages}>
             <Header locale={locale} />
             {children}
+            <Footer />
           </NextIntlClientProvider>
         </body>
       </html>
