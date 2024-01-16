@@ -14,7 +14,7 @@ export default function Hero({ works }: IHero) {
   const generateImage = (imageData: any) => useImageGenerator(imageData);
 
   return (
-    <section className="w-full max-w-[100%] mx-auto max-h-screen justify-center items-center">
+    <section className="w-full max-w-[100%] mx-auto justify-center items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {gridArray.map((item: any, index: number) => {
           const { width, height, src } = generateImage(item.mainImage) as any;
