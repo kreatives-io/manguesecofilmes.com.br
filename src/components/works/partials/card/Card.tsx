@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import useImageGenerator from "@/hooks/useImageGenerator";
 
 interface Props {
   number: number;
@@ -14,22 +15,20 @@ interface Props {
 }
 
 export default function Card({ mainImage, number, artist, workName }: Props) {
-  console.log({ mainImage})
   const isNumberMultipleOfTwo = number % 2 === 0;
   const containerClasses = `container flex flex-col w-full font-freight ${
     isNumberMultipleOfTwo ? "lg:flex-row-reverse" : "lg:flex-row"
   }`;
 
-  const [hash] = mainImage.asset._ref.split('-png');
-  const imageURL = `https://cdn.sanity.io/images/l07wz4l3/production/${hash.split('image-')[1]}.png`;
+  const { src, width, height } = useImageGenerator(mainImage);
   
   return (
     <div className={containerClasses}>
       <div className="relative w-full justify-center items-center self-center lg:w-[60%]">
         <Image
-          src={imageURL}
-          width={1000}
-          height={0}
+          src={src}
+          width={width}
+          height={height}
           alt={mainImage.alt}
           className="object-cover h-full w-full"
           priority
