@@ -32,11 +32,11 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="hidden lg:flex flex-col justify-start items-start absolute top-[50%] w-full max-h-screen[100%] z-[-1] overflow-hidden pointer-events-none">
+      <div className="hidden lg:flex flex-col justify-start items-start absolute top-[50%] w-full z-[-1] overflow-hidden pointer-events-none">
         <span className="text-[500px]/[90%] uppercase text-persian tracking-xg-wide tranlate-x-[-10%] mr-[15%] leading-90%">
           about
         </span>
-        <p className="text-[500px]/[90%] uppercase text-persian tracking-xg-wide tranlate-x-[-100%] ml-[15%] leading-90%">
+        <p className="text-[500px]/[90%] uppercase text-persian tracking-xg-wide ml-[15%] leading-90%">
           about
         </p>
       </div>

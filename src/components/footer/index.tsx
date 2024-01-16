@@ -10,7 +10,7 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>kreatives.io</span>
+        <span>kreatives.io</span>
         </Link>
       </p>
       <p className="flex flex-col items-center gap-2 lg:hidden">
