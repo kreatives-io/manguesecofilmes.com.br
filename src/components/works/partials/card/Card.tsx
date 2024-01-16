@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import useImageGenerator from "@/hooks/useImageGenerator";
+import { useImageGenerator } from "@/hooks";
 
 interface Props {
   number: number;
@@ -10,8 +10,8 @@ interface Props {
     alt: string;
     asset: {
       _ref: string;
-    }
-  }
+    };
+  };
 }
 
 export default function Card({ mainImage, number, artist, workName }: Props) {
@@ -21,7 +21,7 @@ export default function Card({ mainImage, number, artist, workName }: Props) {
   }`;
 
   const { src, width, height } = useImageGenerator(mainImage);
-  
+
   return (
     <div className={containerClasses}>
       <div className="relative w-full justify-center items-center self-center lg:w-[60%]">

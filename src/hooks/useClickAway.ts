@@ -1,22 +1,42 @@
-import { useEffect, useState, useRef } from "react";
+"use client";
 
-export default function useClickAway() {
-  const [active, setActive] = useState(false);
+import { useEffect, useRef } from "react";
 
-  const ref = useRef(null);
-  function toggle() {
-    setActive(!active);
-  }
-  function handleClick(e: any) {
-    if (!(ref.current as any)?.contains(e.target)) setActive(false);
-  }
+const DEFAULT_EVENTS = ["mousedown", "touchstart"];
+
+export default function useClickAway<T extends HTMLElement = any>(
+  handler: () => void,
+  events?: string[] | null,
+  nodes?: (HTMLElement | null)[]
+) {
+  const ref = useRef<T>();
 
   useEffect(() => {
-    if (active) document.addEventListener("mousedown", handleClick);
-    else document.removeEventListener("mousedown", handleClick);
-    return () => {
-      document.removeEventListener("mousedown", handleClick);
+    const listener = (event: any) => {
+      const { target } = event ?? {};
+      if (Array.isArray(nodes)) {
+        const shouldIgnore =
+          target?.hasAttribute("data-ignore-outside-clicks") ||
+          (!document.body.contains(target) && target.tagName !== "HTML");
+        const shouldTrigger = nodes.every(
+          (node) => !!node && !event.composedPath().includes(node)
+        );
+        shouldTrigger && !shouldIgnore && handler();
+      } else if (ref.current && !ref.current.contains(target)) {
+        handler();
+      }
     };
-  }, [active]);
-  return { ref, active, setActive, toggle };
+
+    (events || DEFAULT_EVENTS).forEach((fn) =>
+      document.addEventListener(fn, listener)
+    );
+
+    return () => {
+      (events || DEFAULT_EVENTS).forEach((fn) =>
+        document.removeEventListener(fn, listener)
+      );
+    };
+  }, [ref, handler, nodes]);
+
+  return ref;
 }
