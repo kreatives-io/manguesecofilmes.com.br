@@ -24,7 +24,7 @@ export default function Hero({ works, locale }: IHero) {
           const workLink = `/${locale}/works/${works[index].slug.current}`;
           
           return (
-            <Link key={index} className="opacity-100 relative cursor-pointer" href={workLink}>
+            <Link key={index} className="text-center opacity-100 relative cursor-pointer" href={workLink}>
               <div className="absolute inset-0 bg-black opacity-0 hover:opacity-70 flex flex-col items-center gap-2 justify-center ease-in-out transition-opacity duration-250">
                 <span className="font-freight text-4xl uppercase">{item.artist}</span>
                 <span className="font-freight text-4xl capitalize">{item.workName}</span>

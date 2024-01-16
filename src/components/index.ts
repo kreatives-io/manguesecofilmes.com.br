@@ -3,3 +3,4 @@ export { default as Footer } from "./footer";
 export { default as Hero } from "./hero/Hero";
 export { default as About } from "./about/About";
 export { default as Works } from "./works/Works";
+export { default as WorkDetail } from "./work-detail/WorkDetail";
