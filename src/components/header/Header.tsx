@@ -11,7 +11,7 @@ export default function Header({ locale }: { locale: string }) {
   const links: LinkShape[] = [
     {
       label: t("works"),
-      href: '',
+      href: `/${locale}/works`,
       subItems: [
         { label: t("works featured"), href: `/${locale}/works-featured` },
         { label: t("works unpublished"), href: `/${locale}/works-unpublished` },
