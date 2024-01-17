@@ -18,7 +18,7 @@ export default function Header({ locale }: { locale: string }) {
       ],
     },
     // { label: t("shop"), href: `/${locale}/shop` },
-    { label: t("about"), href: `/${locale}/about` },
+    // { label: t("about"), href: `/${locale}/about` },
   ];
 
   return (

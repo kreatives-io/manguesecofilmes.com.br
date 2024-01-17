@@ -17,7 +17,7 @@ export default function HamburguerMenu({ links }: NavProps) {
         </Link>
       ))}
       <div className="flex text-[24px] hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer hover:opacity-75 overflow-auto uppercase">
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
       </div>
     </div>
   );

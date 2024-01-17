@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Navigation, { LinkShape } from "./partials/navigation/Navigation";
 import LanguageSwitcher from "./partials/language-switcher/LanguageSwitcher";
 import Link from "next/link";
@@ -19,8 +20,12 @@ export default function HeaderDesktop({ links }: NavProps) {
     <div className="relative w-full container hidden lg:flex px-4 text-xl">
       <div className="hidden lg:flex w-full justify-between items-center">
         <Link className="mt-2 uppercase tracking-extra-wide text-xl cursor-pointer" href="/" onClick={() => setIsOpen(false)}>
-          <p className="text-persian">EDVALDO</p>
-          <p className="text-persian">RAW</p>
+          <Image
+            alt="Logo"
+            src="/images/logo_name_white.png"
+            width={330}
+            height={250}
+          />
         </Link>
       </div>
       <div
@@ -32,7 +37,7 @@ export default function HeaderDesktop({ links }: NavProps) {
           setIsOpen={setIsOpen}
           clickRef={ref}
         />
-        <LanguageSwitcher />
+        {/* <LanguageSwitcher /> */}
       </div>
     </div>
   );

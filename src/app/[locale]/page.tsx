@@ -6,5 +6,5 @@ export default async function Home({ params: { locale } }) {
     `*[_type == "work"] { category, artist, slug, publishedAt, mainImage, workName }`
   );
 
-  return <Hero works={works} locale={locale} />;
+  return null;
 }
