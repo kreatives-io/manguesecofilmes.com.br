@@ -21,8 +21,8 @@ const freight = localFont({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Edvaldo Raw",
-  description: "Director, photographer, and visual artist.",
+  title: "Mangue Seco Filmes",
+  description: "A Mangue Seco Filmes é uma produtora de vídeo full-service, apaixonada por contar histórias e comprometida em criar conteúdo visualmente impressionante, emocionalmente e envolvente. Nossa equipe é especializada na criação de vídeos corporativos, comerciais, videoclipes e conteúdo para redes sociais. Atendemos as necessidades de cada instituição, desde pequenas empresas até grandes corporações.",
 };
 
 const locales = ["en", "pt"];
