@@ -1,6 +1,7 @@
 'use client'
 import React, { useMemo, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 // Icons
 import { HiOutlineXMark } from "react-icons/hi2";
 import { CiMenuBurger } from "react-icons/ci";
@@ -45,9 +46,13 @@ export default function HeaderMobile({ links }: NavProps) {
       className={`flex ${menuAnimationClass} w-full justify-center align-center self-center relative container lg:hidden`}
     >
       <div className="flex w-full">
-        <Link className="mt-2 uppercase tracking-extra-wide" href="/">
-          <p className="text-persian text-lg">EDVALDO</p>
-          <p className="text-persian text-lg">RAW</p>
+      <Link className="uppercase tracking-extra-wide text-xl cursor-pointer" href="/">
+          <Image
+            alt="Logo"
+            src="/images/logo.png"
+            width={40}
+            height={40}
+          />
         </Link>
         <div className={opacityAnimation}>
           {isToggleOpen && <HamburguerMenu links={links} />}

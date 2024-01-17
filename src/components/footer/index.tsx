@@ -14,7 +14,7 @@ export default function Footer() {
         </Link>
       </p>
       <p className="flex flex-col items-center gap-2 lg:hidden">
-        <span>© 2023 <span className="font-freight text-persian uppercase">edvaldoraw.com</span> - All rights reserved</span>
+        <span>© 2023 -Mangue Seco Filmes - All rights reserved</span>
         <span>
           Built with ❤️ by
           <Link
