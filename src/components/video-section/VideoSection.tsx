@@ -18,7 +18,15 @@ export default function VideoSection({
       <div
         className={`absolute top-0 w-full h-full bg-black ${backdropOpacity}`}
       />
-      <ReactPlayer url={source} playing loop muted width="100%" height="100%" />
+      <ReactPlayer
+        url={source}
+        playing
+        loop
+        muted
+        width="100vw"
+        height="100vh"
+      />
+
       <div className="absolute top-0 min-h-screen w-full flex flex-col gap-2 items-center justify-center">
         <span className="text-4xl">{artist}</span>
         <span>{workName}</span>

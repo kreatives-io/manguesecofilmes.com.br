@@ -11,7 +11,7 @@ export default function SectioHero() {
         <Header />
       </div>
       <VideoSection
-        source="/videos/section-bg.mp4"
+        source="https://vimeo.com/882682837/f0c0e8f1cf"
         artist="Artist Name Goes Here - TV"
         workName="Work Name"
       />
