@@ -15,19 +15,10 @@ export default function VideoSection({
 }: IVideoSection) {
   return (
     <div className="min-w-full min-h-full">
-      {/* <div
+      <div
         className={`absolute top-0 w-full h-full bg-black ${backdropOpacity}`}
-      /> */}
-      <div className="flex flex-1 absolute top-0 w-full h-full bg-black opacity-45 object-stretch">
-        <ReactPlayer
-          url={source}
-          playing
-          loop
-          muted
-          width="100%"
-          height="100%"
-        />
-      </div>
+      />
+      <ReactPlayer url={source} playing loop muted width="100%" height="100%" />
       <div className="absolute top-0 min-h-screen w-full flex flex-col gap-2 items-center justify-center">
         <span className="text-4xl">{artist}</span>
         <span>{workName}</span>
