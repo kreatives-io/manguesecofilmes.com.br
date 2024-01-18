@@ -11,9 +11,9 @@ export default function SectioHero() {
         <Header />
       </div>
       <VideoSection
-        source="https://vimeo.com/882682837/f0c0e8f1cf"
-        artist="Artist Name Goes Here - TV"
-        workName="Work Name"
+        source="https://vimeo.com/784427825"
+        // artist="Artist Name Goes Here - TV"
+        // workName="Work Name"
       />
     </section>
   );
