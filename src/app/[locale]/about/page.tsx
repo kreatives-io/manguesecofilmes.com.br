@@ -1,9 +1,10 @@
 import React from "react";
-import { About } from "@/components";
+import { About, Header } from "@/components";
 
 export default function page() {
   return (
     <div>
+      <Header />
       <About />
     </div>
   );

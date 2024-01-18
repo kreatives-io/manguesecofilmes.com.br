@@ -15,11 +15,14 @@ export default function HeaderDesktop({ links }: NavProps) {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useClickAway(() => setIsOpen(false));
 
-
   return (
     <div className="relative w-full container hidden lg:flex px-4 text-xl">
       <div className="hidden lg:flex w-full justify-between items-center">
-        <Link className="mt-2 uppercase tracking-extra-wide text-xl cursor-pointer" href="/" onClick={() => setIsOpen(false)}>
+        <Link
+          className="mt-2 uppercase tracking-extra-wide text-xl cursor-pointer"
+          href="/"
+          onClick={() => setIsOpen(false)}
+        >
           <Image
             alt="Logo"
             src="/images/logo_name_white.png"
@@ -28,16 +31,14 @@ export default function HeaderDesktop({ links }: NavProps) {
           />
         </Link>
       </div>
-      <div
-        className="hidden lg:flex absolute uppercase right-0 top-[22%] bottom-0 h-[24px] items-center justify-center px-4"
-      >
+      <div className="hidden lg:flex absolute uppercase right-0 top-[22%] bottom-0 h-[24px] items-center justify-center px-4">
         <Navigation
           links={links}
           isOpen={isOpen}
           setIsOpen={setIsOpen}
           clickRef={ref}
         />
-        {/* <LanguageSwitcher /> */}
+        <LanguageSwitcher />
       </div>
     </div>
   );

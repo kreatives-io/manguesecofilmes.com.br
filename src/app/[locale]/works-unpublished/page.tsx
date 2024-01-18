@@ -1,6 +1,11 @@
-import { Works } from "@/components";
+import { Header, Works } from "@/components";
 import React from "react";
 
 export default function page() {
-  return <Works type="unpublished" />;
+  return (
+    <>
+      <Header />
+      <Works type="unpublished" />
+    </>
+  );
 }
